@@ -32,7 +32,7 @@ const serviceURL = new ServiceURL(
 module.exports = (context, eventGridEvent, inputBlob) => {  
 
   const aborter = Aborter.timeout(30 * ONE_MINUTE);
-  const widthInPixels = 400;
+  const widthInPixels = 100;
   const contentType = context.bindingData.data.contentType;
   const blobUrl = context.bindingData.data.url;
   const blobName = blobUrl.slice(blobUrl.lastIndexOf("/")+1);
